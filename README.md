@@ -12,13 +12,11 @@ Discord: isell_termed_again
 1. Microsoft [Outlook, Hotmail, Skype, Live, etc]
 ```
 
-# How To Use
+Documentation
 
-```
 1. First you make sure you have this library installed or just drag the python file where your python program is located
 
 2. Make a class and now you can use the lib. Example below this message
-```
 
 ```python
 from mailhub import MailHub
@@ -28,7 +26,8 @@ mail = MailHub()
 proxy = {
             'http': f'http://{proxy}:{port}',
             'https': f'http://{proxy}:{port}',
-        }
+}
+
 email = "admin@outlook.com"
 password = "password123"
 
