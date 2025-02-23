@@ -12,7 +12,7 @@ Discord: isell_termed_again
 1. Microsoft [Outlook, Hotmail, Skype, Live, etc]
 ```
 
-Documentation
+# Documentation
 
 1. First you make sure you have this library installed or just drag the python file where your python program is located
 
