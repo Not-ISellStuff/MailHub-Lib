@@ -47,7 +47,7 @@ retry - request was a failure
 custom - locked account
 """
 
-response = r[0] # the login function might return more than 1 thing
+response = r
 
 if response == "ok":
    print("[+] Valid Account")
