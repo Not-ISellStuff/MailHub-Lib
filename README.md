@@ -7,7 +7,7 @@ Library made for checking whether an email is valid or not.
 There's only one mail provider supported atm
 More will be added soon, if you have any suggestions dm me on discord
 
-Discord: isell_termed
+Discord: isell_termed_again
 
 1. Microsoft [Outlook, Hotmail, Skype, Live, etc]
 ```
